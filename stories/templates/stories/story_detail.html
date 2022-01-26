@@ -20,6 +20,12 @@
                 </video>
             </div>
         {% endif %}
+
+        {% if ids.thumbnail and ids.video_url == None %}
+            <div class="mb-0">
+                <img src="{{ids.thumbnail}}" width="100%" class="img-fluid card-img-top border" role="img">
+            </div>
+        {% endif %}
         
         <div class="container p-4">
             <p class="txt-color h4">

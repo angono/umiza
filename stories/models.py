@@ -14,7 +14,7 @@ class Story(models.Model):
     date = models.DateTimeField(auto_now_add=True) 
     video_url = models.CharField(max_length=2000, blank=True, help_text="Copy the video link and paste it here. Optional field.")
     thumbnail = models.CharField(max_length=2000, blank=True, help_text="Copy the image link and paste it here. Optional field.")
-    # image_url = models.CharField(max_length=2000, blank=True, help_text="Copy the image link and paste it here. Optional field.")
+    image_url = models.CharField(max_length=2000, blank=True, help_text="Copy the image link and paste it here. Optional field.")
 
 
 

@@ -21,9 +21,9 @@
             </div>
         {% endif %}
 
-        {% if ids.thumbnail and ids.video_url == None %}
+        {% if ids.image_url %}
             <div class="mb-0">
-                <img src="{{ids.thumbnail}}" width="100%" class="img-fluid card-img-top border" role="img">
+                <img src="{{ids.image_url}}" width="100%" class="img-fluid card-img-top border" role="img">
             </div>
         {% endif %}
         

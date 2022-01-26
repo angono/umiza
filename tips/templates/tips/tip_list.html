@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+<div class="container">
+    <div class="my-2">
+        <a href="{% url 'story:story-list' %}" class="mdl-color-text--purple">
+            <i class="material-icons" role="presentation">home</i>
+            &gt; Tips list &gt;
+        </a> 
+    </div>
+    <div class="line mb-3"></div>
+
+    {% for obj in tip_data %}
+        {% if obj.is_available == True %}
+        <div class="col-md-12 mb-3">
+            <a href="{% url 'tips:tip-detail' obj.id %}" class="txt-color h4">
+                {{obj.title|capfirst}}
+            </a>
+            <p class="h5">On {{obj.date|date}} | By {{obj.author|capfirst}}</p>
+        </div>
+
+        <div class="line"></div>
+        {% endif %}
+    {% endfor %}
+
+    
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+

@@ -35,7 +35,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(4$m*t77#v2lb6u@4r#26t563*o#bq^+s8_v+0omsu-g9am5hu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['umiza.herokuapp.com']
 
@@ -150,7 +150,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_POST = 587 
 EMAIL_USE_TLS = True 
-EMAIL_HOST_USER = 'daxemare@gmail.com'
+EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 
 
@@ -162,11 +162,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals()) 
+django_heroku.settings(locals(), staticfiles=False) 
 
 
-if os.getcwd() == '/app':
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     DEBUG = False
 
 
 

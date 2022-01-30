@@ -19,6 +19,7 @@
             <a href="{% url 'tips:tip-detail' obj.id %}" class="txt-color h4">
                 {{obj.title|capfirst}}
             </a>
+            <p class="h5">{{obj.content|safe|capfirst|truncatechars:200}}</p>
             <p class="h5">On {{obj.date|date}} | By {{obj.author|capfirst}}</p>
         </div>
 
